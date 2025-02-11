@@ -324,14 +324,14 @@ const MyCars = ({ user, fetchCars = async () => { }, myCars = [], updateCar = as
                                 <button
                                     type="button"
                                     onClick={() => setEditingCar(null)}
-                                    className="px-4 py-2 bg-gray-300 text-gray-800 rounded mr-2"
+                                    className="bg-gray-300  mr-2 text-white bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-gray-300 dark:focus:gray-orange-800 shadow-lg shadow-gray-500/50 dark:shadow-lg dark:shadow-gray-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 me-2 mb-4  inline-block"
                                 >
                                     Cancel
                                 </button>
                                 <button
                                     type="button"
                                     onClick={handleSave}
-                                    className="px-4 py-2 bg-orange-600 text-white rounded"
+                                    className="bg-orange-600  bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-orange-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 me-2 mb-4  inline-block"
                                 >
                                     Save
                                 </button>
@@ -351,13 +351,13 @@ const MyCars = ({ user, fetchCars = async () => { }, myCars = [], updateCar = as
                         <div className="flex justify-end mt-4">
                             <button
                                 onClick={() => setDeletingCar(null)}
-                                className="px-4 py-2 bg-gray-300 text-gray-800 rounded mr-2"
+                                className="bg-gray-300  mr-2  bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-gray-300 dark:focus:ring-gray-800 shadow-lg shadow-gray-500/50 dark:shadow-lg dark:shadow-gray-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 me-2 mb-4  inline-block"
                             >
                                 Cancel
                             </button>
                             <button
                                 onClick={handleDelete}
-                                className="px-4 py-2 bg-red-600 text-white rounded"
+                                className="bg-red-600 bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-orange-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 me-2 mb-4  inline-block"
                             >
                                 Delete
                             </button>

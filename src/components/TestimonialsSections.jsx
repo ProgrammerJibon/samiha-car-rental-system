@@ -9,7 +9,7 @@ export default ({ }) => {
     ];
 
 
-    return <section className="my-10 text-center max-w-4xl mx-auto">
+    return <section className="mt-20 text-center max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-8">What Our Customers Say</h2>
         <Slide pauseOnHover={true}>
             {testimonials.map((testimonial, index) => (

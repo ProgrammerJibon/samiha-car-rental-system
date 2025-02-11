@@ -62,6 +62,8 @@ const Home = ({ user, isDarkTheme = false, fetchMostRecentCars }) => {
 
                     <FindYoursDreams />
 
+                    <div className="pt-20 text-center"></div>
+
 
                 </div>
             </div>

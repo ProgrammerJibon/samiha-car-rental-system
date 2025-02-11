@@ -128,7 +128,7 @@ const CarDetailsPage = ({ user = {}, fetchCarById = async (carId) => { }, handle
     return (
         <div className="mx-auto">
             {/* Slideshow */}
-            <section className="overflow-hidden rounded-lg mt-8 shadow-2xl w-10/12 mx-auto">
+            <section className="overflow-hidden mt-8 shadow-2xl w-10/12 mx-auto px-8">
                 <Fade
                     prevArrow={
                         <button className="absolute left-4 mx-8 top-1/2 -translate-y-1/2 z-10 p-4 bg-black/50 text-white hover:bg-black/70 transition-all duration-300 rounded-full">
@@ -145,7 +145,7 @@ const CarDetailsPage = ({ user = {}, fetchCarById = async (carId) => { }, handle
                     {car.images.map((img, i) => (
                         <div key={i} className="relative h-[400px]">
                             <div
-                                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                                className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-lg "
                                 style={{ backgroundImage: `url('${img}')` }}
                             />
                         </div>
@@ -216,7 +216,7 @@ const CarDetailsPage = ({ user = {}, fetchCarById = async (carId) => { }, handle
                 </div>
                 {(canBook && user && "_id" in user) &&
                     <button
-                        className="inline-block w-full md:w-auto px-8 py-4 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors duration-300 transform hover:scale-105"
+                        className="w-full md:w-auto px-8 py-4 bg-orange-600 text-white  hover:bg-orange-700 transition-colors duration-300 transform hover:scale-105  bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-orange-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm text-center mt-4 me-2 mb-4  inline-block"
                         onClick={() => {
                             if (canBook) {
                                 setShowModal(true)

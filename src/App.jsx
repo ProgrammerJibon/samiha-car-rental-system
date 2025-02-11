@@ -289,7 +289,7 @@ const App = () => {
                 const data = await response.json();
                 const tempCars = data.map((car) => {
                     const tempImages = car.images.map((img) => {
-                        return img.startsWith("data:image") ? img : `${server}${img}`;
+                        return img.startsWith("data:image") || img.startsWith("http") ? img : `${server}${img}`;
                     });
                     return {
                         _id: car._id,
@@ -441,7 +441,7 @@ const App = () => {
             const car = await response.json();
             if (response.ok) {
                 const tempImages = car.images.map((img) => {
-                    return img.startsWith("data:image") ? img : `${server}${img}`;
+                    return img.startsWith("data:image") || img.startsWith("http") ? img : `${server}${img}`;
                 });
                 return {
                     _id: car._id,
@@ -547,7 +547,7 @@ const App = () => {
             }
             bookingsData.map((booking) => {
                 booking.car.images = booking.car.images.map((img) => {
-                    return img.startsWith("data:image") ? img : `${server}${img}`;
+                    return img.startsWith("data:image") || img.startsWith("http") ? img : `${server}${img}`;
                 });
                 return booking;
             });
@@ -625,7 +625,7 @@ const App = () => {
 
             availableCars.length > 0 && availableCars.map((car) => {
                 car.images = car.images.map((img) => {
-                    return img.startsWith("data:image") ? img : `${server}${img}`;
+                    return img.startsWith("data:image")  || img.startsWith("http") ? img : `${server}${img}`;
                 });
                 return car;
             });
@@ -651,7 +651,7 @@ const App = () => {
 
             recentCars.length > 0 && recentCars.map((car) => {
                 car.images = car.images.map((img) => {
-                    return img.startsWith("data:image") ? img : `${server}${img}`;
+                    return img.startsWith("data:image")  || img.startsWith("http") ? img : `${server}${img}`;
                 });
                 return car;
             });

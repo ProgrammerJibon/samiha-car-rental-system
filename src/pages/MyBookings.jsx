@@ -280,20 +280,20 @@ const MyBookings = ({ user, fetchMyBookings = async () => [], handleModifyBookin
                                     <div className="space-y-2 inline-grid items-center justify-center ">
                                         {((booking.bookingStatus == "pending")) &&
                                             <button
-                                                className="bg-red-500 text-white px-4 py-2 rounded block items-center justify-center w-[120px] mx-auto"
+                                                className="cancel-btn bg-red-500 text-white px-4 py-2 rounded block items-center justify-center w-[120px] mx-auto "
                                                 onClick={() => {
                                                     setSelectedBooking(booking);
                                                     setRemovingBooking(true);
                                                 }}
                                             >
-                                                <div className="inline-flex items-center w-full">
+                                                <div className="inline-flex items-center w-full ">
                                                     <FaTrashAlt className="mr-2" />
                                                     <span>Cancel</span>
                                                 </div>
                                             </button>}
                                         {(user._id == booking.bookBy._id && booking.bookingStatus == "pending") &&
                                             <button
-                                                className="bg-orange-500 text-white px-4 py-2 rounded block items-center justify-center w-[120px] mx-auto"
+                                                className=" success-btn bg-orange-500 text-white px-4 py-2 rounded block items-center justify-center w-[120px] mx-auto"
                                                 onClick={() => {
                                                     setSelectedBooking(booking);
                                                     setShowModal(true);
@@ -306,7 +306,7 @@ const MyBookings = ({ user, fetchMyBookings = async () => [], handleModifyBookin
                                             </button>}
                                         {(user._id == booking.carOwner._id && booking.bookingStatus == "pending") &&
                                             <button
-                                                className="bg-orange-700 text-white px-4 py-2 rounded block items-center justify-center w-[120px] mx-auto"
+                                                className="success-btn bg-orange-700 text-white px-4 py-2 rounded block items-center justify-center w-[120px] mx-auto"
                                                 onClick={() => {
                                                     setSelectedBooking(booking);
                                                     setConfirmingBooking(true);
@@ -407,13 +407,13 @@ const MyBookings = ({ user, fetchMyBookings = async () => [], handleModifyBookin
                         <div className="mt-4 flex justify-center space-x-4">
                             {updatingData ? (<HashLoader color="green" />) :
                                 (<><button
-                                    className="px-6 py-2 bg-gray-400 text-white rounded-lg"
+                                    className="px-6 py-2 bg-gray-400 text-white rounded-lg cancel-btn"
                                     onClick={() => setShowModal(false)}
                                 >
                                     Close
                                 </button>
                                     <button
-                                        className="px-6 py-2 bg-orange-600 text-white rounded-lg"
+                                        className="px-6 py-2 bg-orange-600 text-white rounded-lg success-btn"
                                         onClick={handleModifyBooking}
                                     >
                                         Update Booking
@@ -433,13 +433,13 @@ const MyBookings = ({ user, fetchMyBookings = async () => [], handleModifyBookin
                         <div className="flex justify-end mt-4">
                             <button
                                 onClick={() => setRemovingBooking(false)}
-                                className="px-4 py-2 bg-gray-300 text-gray-800 rounded mr-2"
+                                className="px-4 py-2 bg-gray-300 text-gray-800 rounded mr-2  cancel-btn"
                             >
                                 Close
                             </button>
                             <button
                                 onClick={handleCancelBooking}
-                                className="px-4 py-2 bg-red-600 text-white rounded"
+                                className="px-4 py-2 bg-red-600 text-white rounded success-btn"
                             >
                                 Cancel
                             </button>
@@ -455,13 +455,13 @@ const MyBookings = ({ user, fetchMyBookings = async () => [], handleModifyBookin
                         <div className="flex justify-end mt-4">
                             <button
                                 onClick={() => setConfirmingBooking(false)}
-                                className="px-4 py-2 bg-gray-300 text-gray-800 rounded mr-2"
+                                className="px-4 py-2 bg-gray-300 text-gray-800 rounded mr-2 cancel-btn"
                             >
                                 Close
                             </button>
                             <button
                                 onClick={handleConfirmButton}
-                                className="px-4 py-2 bg-red-600 text-white rounded"
+                                className="px-4 py-2 bg-red-600 text-white rounded success-btn"
                             >
                                 Confirm
                             </button>

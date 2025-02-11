@@ -93,7 +93,7 @@ const Login = ({ onLogin, googleLogin, user }) => {
                 :
                 <button
                     type="submit"
-                    className="w-full bg-orange-600 text-white p-3 rounded font-semibold hover:bg-orange-700"
+                    className="w-full bg-orange-600 text-white p-3 rounded font-semibold hover:bg-orange-700 text-white bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-orange-300 dark:focus:ring-orange-800 shadow-lg shadow-orange-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-4 me-2 mb-4  inline-block"
                 >
                     Login
                 </button>}

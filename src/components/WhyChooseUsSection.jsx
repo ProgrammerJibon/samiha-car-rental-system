@@ -1,5 +1,5 @@
 export default function WhyChooseUsSection({ }) {
-    return <section className="py-16 px-6">
+    return <section className="mt-20 px-6">
         <div className="mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
             <div className="md:flex block w-full justify-center items-center">
